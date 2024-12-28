@@ -1,0 +1,201 @@
+body {   
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f4f11; /* خلفية دافئة فاتحة */
+}
+
+h2 {
+    color: #96550;
+}
+
+#login-container, #welcome-container, #booking-container, #report-container, #add-company-container, #add-hotel-container {
+    margin: 20px;
+    padding: 20px;
+    background-color: #ffffff; /* خلفية بيضاء بسيطة */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* ظل خفيف */
+}
+
+input, select, textarea {
+    margin: 10px 0;
+    padding: 8px;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #3498db; /* أزرق هادئ */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #2980b9; /* أزرق داكن عند المرور */
+}
+
+.hidden {
+    display: none;
+}
+
+#back-to-welcome-btn, #back-to-welcome-report-btn, #back-to-welcome-from-company, #back-to-welcome-from-hotel {
+    background-color: #95a5a6;
+}
+
+#back-to-welcome-btn:hover, #back-to-welcome-report-btn:hover, #back-to-welcome-from-company:hover, #back-to-welcome-from-hotel:hover {
+    background-color: #7f8c8d;
+}
+
+textarea {
+    resize: none;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid #ccc;
+}
+
+th, td {
+    padding: 12px 8px;
+    text-align: center;
+    font-size: 14px;
+}
+
+th {
+    background-color: #3498db;
+    color: white;
+}
+
+td button {
+    background-color: #e74c3c;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+td button:hover {
+    background-color: #c0392b;
+}
+
+#report-container h2 {
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+#filter-date, #filter-trip-time, #filter-trip-type, #apply-filters-btn, #print-report-btn {
+    margin: 10px;
+    padding: 8px;
+}
+
+#report-table th {
+    background-color: #2980b9;
+}
+
+#report-table td {
+    font-size: 14px;
+}
+
+/* تحسين محاذاة النصوص في التقرير */
+#report-table td, #report-table th {
+    text-align: center;
+}
+
+/* تحسينات خاصة للطباعة */
+@media print {
+    body {
+        background-color: #fff;
+        color: #000;
+        font-size: 12px;
+    }
+
+    h2 {
+        font-size: 24px;
+        text-align: center;
+        margin-top: 0;
+    }
+
+    #report-container {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    table {
+        width: 100%;
+        border: 1px solid #000;
+        border-collapse: collapse;
+        font-size: 12px;
+        margin-bottom: 20px;
+    }
+
+    th, td {
+        border: 1px solid #000;
+        padding: 8px;
+        font-size: 12px;
+        text-align: center;
+    }
+
+    th {
+        background-color: #3498db;
+        color: white;
+    }
+
+    td {
+        text-align: center;
+    }
+
+    button {
+        display: none; /* إخفاء الأزرار عند الطباعة */
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    /* تحسين تنسيق التقرير عند الطباعة */
+    #report-table th {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    /* زيادة مساحة الأعمدة عند الطباعة */
+    #report-table td {
+        padding: 12px 8px;
+        font-size: 14px;
+    }
+
+    /* تنسيق صفحة الطباعة */
+    .no-print {
+        display: none;
+    }
+}
+
+@media print {
+    /* إخفاء الفلاتر أثناء الطباعة */
+    .filter-container {
+        display: none;
+    }
+
+    /* إظهار اللوجو أثناء الطباعة */
+    #report-logo {
+        display: block;
+        margin: 0 auto;
+        width: 150px; /* أو الحجم الذي تريده */
+    }
+
+    /* التأكد من أن العناصر الأخرى تظهر بشكل جيد أثناء الطباعة */
+}

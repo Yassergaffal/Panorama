@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Panorama Submarin</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Final</title>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+    <!-- partial:index.partial.html -->
+    <!DOCTYPE html>
+    <html lang="ar">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Reservation Panorama Submarine</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
+    </head>
+
+    <body>
+
+        <!-- واجهة تسجيل الدخول -->
+        <div id="login-container">
+            <h2>Login</h2>
+            <form id="login-form">
+                <label for="username">User Name </label>
+                <input type="text" id="username" name="username" required>
+                <label for="password"> Password</label>
+                <input type="password" id="password" name="password" required>
+                <button type="submit">Send</button>
+            </form>
+        </div>
+
+        <!-- واجهة الترحيب -->
+        <div id="welcome-container" class="hidden">
+            <h2>Booking Panorama Submarine</h2>
+            <button id="add-booking-btn">Add Booking</button>
+            <button id="view-report-btn">Report</button>
+            <button id="add-company-btn">Add Company</button>
+            <button id="add-hotel-btn">Add Hotel</button>
+            <button id="logout-btn">Logout</button>
+        </div>
+
+        <!-- واجهة إضافة حجز -->
+        <div id="booking-container" class="hidden">
+            <h2>BOOKING</h2>
+            <form id="booking-form">
+                <label for="travel-date">Date</label>
+                <input type="date" id="travel-date" required>
+
+                <label for="trip-type">Trip</label>
+                <select id="trip-type" required>
+                    <option value="sea-line-1">Sea Lion 1 </option>
+                    <option value="sea-line-2">Sea Lion 2 </option>
+                </select>
+
+                <label for="trip-time">Time</label>
+                <select id="trip-time" required>
+                    <option value="09:00">09:00</option>
+                    <option value="10:30">10:30</option>
+                    <option value="12:00">12:00</option>
+                    <option value="13:00">13:00</option>
+                    <option value="15:00">15:00</option>
+                    <option value="16:30">16:30</option>
+                </select>
+
+
+                <label for="company-name">Customer Name</label>
+                <input type="text" id="company-name" list="company-list" required>
+                <datalist id="company-list">
+                    <!-- شركات سيتم إضافتها هنا -->
+                </datalist>
+
+                <label for="hotel-name">Hotel Name </label>
+                <input type="text" id="hotel-name" list="hotel-list" required>
+                <datalist id="hotel-list">
+                    <!-- فنادق سيتم إضافتها هنا -->
+                </datalist>
+
+                <div id="pick-up-container">
+                    <!-- حقول pick-up سيتم إضافتها هنا حسب وقت الرحلة -->
+                </div>
+
+                <label for="room-number">Room N</label>
+                <input type="text" id="room-number" required>
+
+                <label for="adults">Adut</label>
+                <input type="number" id="adults" min="0" required>
+
+                <label for="children">Chid</label>
+                <input type="number" id="children" min="0" required>
+
+                <label for="infants">Infant</label>
+                <input type="number" id="infants" min="0" required>
+
+                <label for="notes">Notes</label>
+                <textarea id="notes" rows="4"></textarea>
+
+                <button type="submit">Booking</button>
+            </form>
+            <button id="back-to-welcome-btn">Back </button>
+        </div>
+
+
+        <!-- واجهة التقرير -->
+        <div id="report-container" class="hidden">
+            <h2>Report Panorama Submarine</h2>
+
+            <div id="logo-container" class="no-print">
+                <img src="path_to_logo.png" alt="Logo" id="report-logo">
+            </div>
+
+            <div class="filter-container">
+                <label for="filter-date">Date</label>
+                <input type="date" id="filter-date">
+
+                <label for="filter-trip-type">Trip</label>
+                <select id="filter-trip-type">
+                    <option value="">All</option>
+                    <option value="sea-line-1">Sea Lion 1 </option>
+                    <option value="sea-line-2">Sea Lion 2 </option>
+                </select>
+
+                <label for="filter-trip-time">Time</label>
+                <select id="filter-trip-time">
+                    <option value="">All</option>
+                    <option value="09:00">09:00</option>
+                    <option value="10:30">10:30</option>
+                    <option value="12:00">12:00</option>
+                    <option value="13:00">13:00</option>
+                    <option value="15:00">15:00</option>
+                    <option value="16:30">16:30</option>
+                </select>
+
+                <button id="apply-filters-btn">Submit </button>
+            </div>
+
+            <table id="report-table">
+                <thead>
+                    <tr>
+                        <th>Customer</th>
+                        <th>Hotel</th>
+                        <th>Pick up</th>
+                        <th>Room N</th>
+                        <th>Adult</th>
+                        <th>Child</th>
+                        <th>Inf</th>
+                        <th>Nots</th>
+                        <th>Control</th>
+                    </tr>
+                </thead>
+                <tbody id="report-body">
+                    <!-- بيانات التقرير ستضاف هنا -->
+                </tbody>
+            </table>
+
+            <button id="print-report-btn">Print Report </button>
+            <button id="download-report-btn">Download Report</button>
+            <button id="back-to-welcome-report-btn">Back</button>
+        </div>
+
+        <!-- نافذة إضافة أو تعديل شركة جديدة -->
+        <div id="add-company-container" class="hidden">
+            <h2 id="company-header"> Add Customer</h2>
+            <form id="company-form">
+                <label for="company-name-input">Customer Name</label>
+                <input type="text" id="company-name-input" required>
+                <button type="submit" id="company-submit-btn">Add</button>
+            </form>
+            <button id="back-to-welcome-from-company">Back</button>
+        </div>
+
+        <!-- نافذة إضافة أو تعديل فندق جديد -->
+        <div id="add-hotel-container" class="hidden">
+            <h2 id="hotel-header">Add Hotel</h2>
+            <form id="hotel-form">
+                <label for="hotel-name-input">Hotel Name</label>
+                <input type="text" id="hotel-name-input" required">
+
+                <!-- إضافة حقل pick up لكل وقت رحلة -->
+                <div id="pick-up-fields">
+                    <label for="pick-up-09:00"> 09:00:</label>
+                    <input type="text" name="pick-up-09:00" id="pick-up-09:00" placeholder="pick up 09:00">
+                    <label for="pick-up-10:30"> 10:30:</label>
+                    <input type="text" name="pick-up-10:30" placeholder="pick up 10:30">
+                    <label for="pick-up-12:00"> 12:00:</label>
+                    <input type="text" name="pick-up-12:00" placeholder="pick up 12:00">
+                    <label for="pick-up-13:00"> 13:00:</label>
+                    <input type="text" name="pick-up-13:00" placeholder="pick up 13:00">
+                    <label for="pick-up-15:00"> 15:00:</label>
+                    <input type="text" name="pick-up-15:00" placeholder="pick up 15:00">
+                    <label for="pick-up-16:30"> 16:30:</label>
+                    <input type="text" name="pick-up-16:30" placeholder="pick up 16:30">
+                </div>
+
+                <button type="submit" id="hotel-submit-btn"> Add Hotel</button>
+            </form>
+            <button id="back-to-welcome-from-hotel">Back</button>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+
+    </html>
+    <!-- partial -->
+    <script src="./script.js"></script>
+
+</body>
+
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>

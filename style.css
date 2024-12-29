@@ -1,44 +1,44 @@
-body {   
+body {
     font-family: Arial, sans-serif;
     text-align: center;
     margin: 0;
     padding: 0;
-    background-color: #f0f4f11; /* خلفية دافئة فاتحة */
+    background-color: #e9f7fc; /* خلفية فاتحة تميل إلى الأزرق الفاتح */
 }
 
 h2 {
-    color: #96550;
+    color: #34495e; /* لون أزرق داكن يميل إلى الرمادي */
 }
 
 #login-container, #welcome-container, #booking-container, #report-container, #add-company-container, #add-hotel-container {
     margin: 20px;
     padding: 20px;
-    background-color: #ffffff; /* خلفية بيضاء بسيطة */
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* ظل خفيف */
+    background-color: #ffffff; /* خلفية بيضاء لزيادة الوضوح */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* ظل أكبر لجعل الحواف أكثر وضوحًا */
 }
 
 input, select, textarea {
     margin: 10px 0;
-    padding: 8px;
+    padding: 10px;
     width: 100%;
     box-sizing: border-box;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    border: 1px solid #ddd; /* حدود فاتحة */
+    border-radius: 5px;
 }
 
 button {
-    background-color: #3498db; /* أزرق هادئ */
+    background-color: #1abc9c; /* لون أخضر زمردي هادئ */
     color: white;
     border: none;
-    padding: 10px 20px;
+    padding: 12px 24px;
     cursor: pointer;
-    border-radius: 4px;
+    border-radius: 5px;
     transition: background-color 0.3s ease;
 }
 
 button:hover {
-    background-color: #2980b9; /* أزرق داكن عند المرور */
+    background-color: #16a085; /* أخضر داكن عند التمرير */
 }
 
 .hidden {
@@ -46,11 +46,11 @@ button:hover {
 }
 
 #back-to-welcome-btn, #back-to-welcome-report-btn, #back-to-welcome-from-company, #back-to-welcome-from-hotel {
-    background-color: #95a5a6;
+    background-color: #95a5a6; /* لون رمادي فاتح محايد */
 }
 
 #back-to-welcome-btn:hover, #back-to-welcome-report-btn:hover, #back-to-welcome-from-company:hover, #back-to-welcome-from-hotel:hover {
-    background-color: #7f8c8d;
+    background-color: #7f8c8d; /* رمادي داكن عند المرور */
 }
 
 textarea {
@@ -68,41 +68,43 @@ table, th, td {
 }
 
 th, td {
-    padding: 12px 8px;
+    padding: 14px 10px;
     text-align: center;
-    font-size: 14px;
+    font-size: 15px;
 }
 
 th {
-    background-color: #3498db;
+    background-color: #2980b9; /* أزرق داكن للعناوين */
     color: white;
 }
 
 td button {
-    background-color: #e74c3c;
+    background-color: #e74c3c; /* لون أحمر لزر الحذف */
     color: white;
-    padding: 5px 10px;
+    padding: 5px 12px;
     border: none;
-    border-radius: 4px;
+    border-radius: 10px;
     cursor: pointer;
 }
 
 td button:hover {
-    background-color: #c0392b;
+    background-color: #c0392b; /* أحمر داكن عند المرور */
 }
 
 #report-container h2 {
     margin-bottom: 20px;
-    color: #2c3e50;
+    color: #2c3e50; /* أزرق داكن منسجم مع باقي الألوان */
 }
 
 #filter-date, #filter-trip-time, #filter-trip-type, #apply-filters-btn, #print-report-btn {
     margin: 10px;
-    padding: 8px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #bdc3c7; /* حدود خفيفة بلون محايد */
 }
 
 #report-table th {
-    background-color: #2980b9;
+    background-color: #2980b9; /* أزرق داكن */
 }
 
 #report-table td {

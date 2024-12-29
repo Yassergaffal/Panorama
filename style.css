@@ -211,3 +211,19 @@ td button:hover {
 
     /* التأكد من أن العناصر الأخرى تظهر بشكل جيد أثناء الطباعة */
 }
+@media (max-width: 768px) {
+    #logo {
+        width: 100px; /* تقليل حجم اللوجو على الشاشات الصغيرة */
+        top: 5px;
+        left: 5px;
+    }
+}
+
+@media print {
+    #logo {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        width: 100px;
+    }
+}

@@ -115,7 +115,15 @@ td button:hover {
 #report-table td, #report-table th {
     text-align: center;
 }
-
+/* تنسيق اللوجو داخل البرنامج */
+#logo {
+    position: absolute;
+    top: 10px; /* المسافة من أعلى الصفحة */
+    left: 10px; /* المسافة من يسار الصفحة */
+    width: 150px; /* حجم اللوجو */
+    height: auto; /* الحفاظ على النسبة */
+    z-index: 1000; /* لضمان ظهوره فوق جميع العناصر */
+}
 /* تحسينات خاصة للطباعة */
 @media print {
     body {

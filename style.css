@@ -195,8 +195,10 @@ td button:hover {
     /* إظهار اللوجو أثناء الطباعة */
     #report-logo {
         display: block;
-        margin: 0 auto;
-        width: 150px; /* أو الحجم الذي تريده */
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        width: 150px;/* أو الحجم الذي تريده */
     }
 
     /* التأكد من أن العناصر الأخرى تظهر بشكل جيد أثناء الطباعة */

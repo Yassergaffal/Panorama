@@ -1,40 +1,34 @@
-/* إعدادات عامة للصفحة */
 body {
     font-family: Arial, sans-serif;
     text-align: center;
     margin: 0;
     padding: 0;
-    background-color: #e9f7fc; /* خلفية فاتحة تميل إلى الأزرق */
+    background-color: #e9f7fc; /* خلفية فاتحة تميل إلى الأزرق الفاتح */
 }
 
-/* تنسيق العناوين */
 h2 {
     color: #34495e; /* لون أزرق داكن يميل إلى الرمادي */
 }
 
-/* تنسيق الحاويات الرئيسية */
-#login-container, #welcome-container, #booking-container, 
-#report-container, #add-company-container, #add-hotel-container {
+#login-container, #welcome-container, #booking-container, #report-container, #add-company-container, #add-hotel-container {
     margin: 20px;
     padding: 20px;
-    background-color: #ffffff; /* خلفية بيضاء */
+    background-color: #ffffff; /* خلفية بيضاء لزيادة الوضوح */
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* ظل خفيف */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* ظل أكبر لجعل الحواف أكثر وضوحًا */
 }
 
-/* تنسيق الحقول */
 input, select, textarea {
     margin: 10px 0;
     padding: 10px;
     width: 100%;
     box-sizing: border-box;
-    border: 1px solid #ddd;
+    border: 1px solid #ddd; /* حدود فاتحة */
     border-radius: 5px;
 }
 
-/* تنسيق الأزرار */
 button {
-    background-color: #1abc9c; /* لون أخضر زمردي */
+    background-color: #1abc9c; /* لون أخضر زمردي هادئ */
     color: white;
     border: none;
     padding: 12px 24px;
@@ -47,23 +41,22 @@ button:hover {
     background-color: #16a085; /* أخضر داكن عند التمرير */
 }
 
-/* أزرار الرجوع */
-#back-to-welcome-btn, #back-to-welcome-report-btn, 
-#back-to-welcome-from-company, #back-to-welcome-from-hotel {
-    background-color: #95a5a6; /* لون رمادي فاتح */
+.hidden {
+    display: none;
 }
 
-#back-to-welcome-btn:hover, #back-to-welcome-report-btn:hover, 
-#back-to-welcome-from-company:hover, #back-to-welcome-from-hotel:hover {
-    background-color: #7f8c8d; /* رمادي داكن */
+#back-to-welcome-btn, #back-to-welcome-report-btn, #back-to-welcome-from-company, #back-to-welcome-from-hotel {
+    background-color: #95a5a6; /* لون رمادي فاتح محايد */
 }
 
-/* منع تغيير حجم مربع النص */
+#back-to-welcome-btn:hover, #back-to-welcome-report-btn:hover, #back-to-welcome-from-company:hover, #back-to-welcome-from-hotel:hover {
+    background-color: #7f8c8d; /* رمادي داكن عند المرور */
+}
+
 textarea {
     resize: none;
 }
 
-/* تنسيق الجداول */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -81,12 +74,12 @@ th, td {
 }
 
 th {
-    background-color: #2980b9; /* أزرق داكن */
+    background-color: #2980b9; /* أزرق داكن للعناوين */
     color: white;
 }
 
 td button {
-    background-color: #e74c3c; /* أحمر لزر الحذف */
+    background-color: #e74c3c; /* لون أحمر لزر الحذف */
     color: white;
     padding: 5px 12px;
     border: none;
@@ -95,35 +88,43 @@ td button {
 }
 
 td button:hover {
-    background-color: #c0392b; /* أحمر داكن */
+    background-color: #c0392b; /* أحمر داكن عند المرور */
 }
 
-/* تنسيق حاوية التقارير */
 #report-container h2 {
     margin-bottom: 20px;
-    color: #2c3e50; /* أزرق داكن */
+    color: #2c3e50; /* أزرق داكن منسجم مع باقي الألوان */
 }
 
-/* تنسيق عناصر الفلاتر */
-#filter-date, #filter-trip-time, #filter-trip-type, 
-#apply-filters-btn, #print-report-btn {
+#filter-date, #filter-trip-time, #filter-trip-type, #apply-filters-btn, #print-report-btn {
     margin: 10px;
     padding: 10px;
     border-radius: 5px;
-    border: 1px solid #bdc3c7;
+    border: 1px solid #bdc3c7; /* حدود خفيفة بلون محايد */
 }
 
-/* تنسيق اللوجو */
+#report-table th {
+    background-color: #2980b9; /* أزرق داكن */
+}
+
+#report-table td {
+    font-size: 14px;
+}
+
+/* تحسين محاذاة النصوص في التقرير */
+#report-table td, #report-table th {
+    text-align: center;
+}
+/* تنسيق اللوجو داخل البرنامج */
 #logo {
     position: absolute;
-    top: 10px;
-    left: 10px;
-    width: 150px;
-    height: auto;
-    z-index: 1000;
+    top: 10px; /* المسافة من أعلى الصفحة */
+    left: 10px; /* المسافة من يسار الصفحة */
+    width: 150px; /* حجم اللوجو */
+    height: auto; /* الحفاظ على النسبة */
+    z-index: 1000; /* لضمان ظهوره فوق جميع العناصر */
 }
-
-/* إعدادات الطباعة */
+/* تحسينات خاصة للطباعة */
 @media print {
     body {
         background-color: #fff;
@@ -163,16 +164,50 @@ td button:hover {
         color: white;
     }
 
-    button, .hidden {
-        display: none; /* إخفاء العناصر غير المطلوبة أثناء الطباعة */
+    td {
+        text-align: center;
+    }
+
+    button {
+        display: none; /* إخفاء الأزرار عند الطباعة */
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    /* تحسين تنسيق التقرير عند الطباعة */
+    #report-table th {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    /* زيادة مساحة الأعمدة عند الطباعة */
+    #report-table td {
+        padding: 12px 8px;
+        font-size: 14px;
+    }
+
+    /* تنسيق صفحة الطباعة */
+    .no-print {
+        display: none;
     }
 }
 
-/* تحسين استجابة التصميم */
-@media (max-width: 768px) {
-    #logo {
-        max-width: 100px; /* تقليل الحجم على الشاشات الصغيرة */
-        top: 5px;
-        left: 5px;
+@media print {
+    /* إخفاء الفلاتر أثناء الطباعة */
+    .filter-container {
+        display: none;
     }
+
+    /* إظهار اللوجو أثناء الطباعة */
+    #report-logo {
+        display: block;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        width: 150px;/* أو الحجم الذي تريده */
+    }
+
+    /* التأكد من أن العناصر الأخرى تظهر بشكل جيد أثناء الطباعة */
 }
